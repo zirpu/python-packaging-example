@@ -1,3 +1,2 @@
 include tox.ini
-recurisive-include data *.cfg
-
+recursive-include data *.cfg
