@@ -3,7 +3,7 @@
 # example stolen from hpk42's devpi docs.
 import os, sys
 
-from setuptools import setup
+from setuptools import setup, find_packages
 
 
 # setup needs to be run/found for pyroma.
@@ -16,7 +16,8 @@ setup(
     author='Holger Krekel',
     url="http://example.com",
     author_email='holger at merlinux.eu',
-    py_modules=["example"],
+    #py_modules=["example"],
+    packages=['example'],
     zip_safe=False,
 
         ## i'm trying to figure out why sdist and wheel building are different for including data.
