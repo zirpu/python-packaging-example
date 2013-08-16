@@ -20,14 +20,16 @@ setup(
     packages=['example'],
     zip_safe=False,
 
-        ## i'm trying to figure out why sdist and wheel building are different for including data.
+    ## i'm trying to figure out why sdist and wheel building are different for including data.
     include_package_data=True,
 
-        # this doesn't work to build wheels. sdist works with or without this.
-    package_data={
-        'data': ['*.cfg'],
-        '': ['data/*.cfg'],
-    },
+    # package_data isn't needed for sdist or wheel if you spec the files in MANIFEST.in 
+
+    # this now works for building wheels, it finds the data dir in the example package
+    # package_data={
+    #     'example': ['data/something.cfg'],
+    #     '': ['something.cfg'],
+    # },
 
 )
 
