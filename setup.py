@@ -12,7 +12,7 @@ from setuptools import setup, find_packages
 setup(
     name='example',
     description='example test project (please ignore)',
-    version='1.0',
+    version='1.0.1',
     author='Holger Krekel',
     url="http://example.com",
     author_email='holger at merlinux.eu',
@@ -26,6 +26,7 @@ setup(
     # package_data isn't needed for sdist or wheel if you spec the files in MANIFEST.in 
 
     # this now works for building wheels, it finds the data dir in the example package
+    # but does not work for sdist.
     # package_data={
     #     'example': ['data/something.cfg'],
     #     '': ['something.cfg'],
