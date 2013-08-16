@@ -6,25 +6,27 @@ import os, sys
 from setuptools import setup
 
 
-if __name__ == '__main__':
+# setup needs to be run/found for pyroma.
+#if __name__ == '__main__':
 
-    setup(
-        name='example',
-        description='example test project (please ignore)',
-        version='1.0',
-        author='Holger Krekel',
-        url="http://example.com",
-        author_email='holger at merlinux.eu',
-        py_modules=["example"],
-        zip_safe=False,
+setup(
+    name='example',
+    description='example test project (please ignore)',
+    version='1.0',
+    author='Holger Krekel',
+    url="http://example.com",
+    author_email='holger at merlinux.eu',
+    py_modules=["example"],
+    zip_safe=False,
 
         ## i'm trying to figure out why sdist and wheel building are different for including data.
-        include_package_data=True,
+    include_package_data=True,
 
         # this doesn't work to build wheels. sdist works with or without this.
-        package_data={
-            'data': ['*.cfg'],
-            '': ['data/*.cfg'],
-        },
+    package_data={
+        'data': ['*.cfg'],
+        '': ['data/*.cfg'],
+    },
 
-    )
+)
+
