@@ -16,18 +16,15 @@ if __name__ == '__main__':
         url="http://example.com",
         author_email='holger at merlinux.eu',
         py_modules=["example"],
+        zip_safe=False,
 
-## i'm trying to figure out why sdist and wheel building are different for including data.
-
+        ## i'm trying to figure out why sdist and wheel building are different for including data.
         include_package_data=True,
 
         # # with and without MANIFEST.in this doesn't work.
         package_data={
             'data': ['*.cfg'],
-            '': ['*.cfg'],
+            '': ['data/*.cfg'],
         },
 
-        data_files={
-            'data': ['data/something.cfg'],
-        },
     )
