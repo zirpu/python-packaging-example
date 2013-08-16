@@ -21,7 +21,7 @@ if __name__ == '__main__':
         ## i'm trying to figure out why sdist and wheel building are different for including data.
         include_package_data=True,
 
-        # # with and without MANIFEST.in this doesn't work.
+        # this doesn't work to build wheels. sdist works with or without this.
         package_data={
             'data': ['*.cfg'],
             '': ['data/*.cfg'],
