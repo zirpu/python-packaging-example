@@ -1,5 +1,5 @@
 include tox.ini
 include *.py
-recursive-include data *.cfg
+recursive-include example/data *.cfg
 include *.md
 include LICENSE
